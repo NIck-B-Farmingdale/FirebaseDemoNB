@@ -38,7 +38,8 @@ public class DemoApp extends Application {
         fstore = contxtFirebase.firebase();
         fauth = FirebaseAuth.getInstance();
 
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        // Load the new welcome screen first
+        scene = new Scene(loadFXML("welcome"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }
@@ -55,6 +56,4 @@ public class DemoApp extends Application {
     public static void main(String[] args) {
         launch();
     }
-
-
 }
